@@ -18,6 +18,10 @@ const NewExpense = (props) => {
     setRenderForm(true);
   };
 
+  const stopRenderingForm = () => {
+    setRenderForm(false);
+  };
+
   return (
     <div className="new-expense">
       {!renderForm && (
@@ -26,6 +30,7 @@ const NewExpense = (props) => {
       {renderForm && (
         <ExpenseForm
           onSaveExpenseData={saveExpenseDataHandler}
+          onCancel={stopRenderingForm}
         ></ExpenseForm>
       )}
     </div>
