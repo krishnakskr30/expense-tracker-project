@@ -34,36 +34,6 @@ function Expenses(props) {
         selected={selectedYear}
         onSelectingYear={setSelectedYearHandler}
       ></ExpensesFilter>
-      {/*
-        we can use && to make it more readable
-        {filteredExpenses.length === 0 && <p> No expenses found</p>}
-        {filteredExpenses.length > 0 && 
-          filteredExpenses.map((expense) => (
-            <ExpenseItem
-              key={expense.id}
-              title={expense.title}
-              amount={expense.amount}
-              date={expense.date}
-            ></ExpenseItem>
-          ))
-        }
-        */}
-      {/* 
-        we can use ternanry expression also, but it is not readable
-        {
-        {filteredExpenses.length === 0 ? (
-          <p>No expenses found</p>
-        ) : (
-          filteredExpenses.map((expense) => (
-            <ExpenseItem
-              key={expense.id}
-              title={expense.title}
-              amount={expense.amount}c
-              date={expense.date}
-            ></ExpenseItem>
-          ))
-        )} */}
-
       {expensesContent}
     </Card>
   );

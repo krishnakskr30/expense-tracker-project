@@ -27,9 +27,6 @@ function App() {
   const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
 
   const addExpenseHandler = (expense) => {
-    // console.log("in app component");
-    // console.log(expense);
-    // setExpenses([expense, ...expenses]); really not correct, use special function like below
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses];
     });
